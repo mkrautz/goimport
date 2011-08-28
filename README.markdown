@@ -10,16 +10,16 @@ Installing it
 
 Simply clone this repo to your Packages directory.  On Mac OS X, this would be:
 
- $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
- $ git clone git://github.com/mkrautz/goimport.git GoImport
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+    $ git clone git://github.com/mkrautz/goimport.git GoImport
 
 After cloning the repo, you'll also need to add keybinds for activating the import
 and drop prompts.  My user keybinds look like this:
 
- [
-     { "keys": ["f1"], "command": "prompt_go_import" },
-     { "keys": ["f2"], "command": "prompt_go_drop" }
- ]
+    [
+        { "keys": ["f1"], "command": "prompt_go_import" },
+        { "keys": ["f2"], "command": "prompt_go_drop" }
+    ]
 
 Keybinds can be configured via the Preferences -> Key Bindings (User) menu.
 
