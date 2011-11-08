@@ -52,7 +52,7 @@ class ImportMutator(object):
 					if tok.kind != golex.STRINGLIT:
 						err = True
 						break
-				# Named miport
+				# Named import
 				if tok.kind == golex.IDENTIFIER:
 					name = tok
 					continue
@@ -61,6 +61,8 @@ class ImportMutator(object):
 					# Named import
 					if name:
 						pkgs.append((name.value, tok.value[1:-1]))
+						# Drop the name for the next import
+						name = None
 					else:
 						pkgs.append((None, tok.value[1:-1]))
 		# Single import
